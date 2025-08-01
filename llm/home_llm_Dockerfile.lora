@@ -1,0 +1,27 @@
+FROM nvidia/cuda:12.1.1-cudnn8-devel-ubuntu22.04
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get update && apt-get install -y \
+    git curl wget unzip nano \
+    python3 python3-pip python-is-python3 \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN pip install --upgrade pip
+
+RUN pip install \
+    torch==2.1.2+cu121 torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu121 \
+    transformers==4.39.1 \
+    peft==0.10.0 \
+    accelerate==0.28.0 \
+    datasets==2.18.0 \
+    bitsandbytes==0.42.0 \
+    xformers \
+    sentencepiece \
+    ipykernel \
+    jupyterlab
+
+RUN mkdir -p /workspace
+WORKDIR /workspace
+
+CMD ["jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root"]

@@ -1,0 +1,99 @@
+# The Home Manifesto
+
+## What’s Broken
+
+AI today is disjointed, stateless, and impersonal. You get answers — but not memory. You get intelligence — but not continuity. You get tools — but not integration. No agent can:
+
+* Remember who you are.
+* Act on your behalf.
+* Reflect and improve.
+* Work in your voice.
+* Compose or orchestrate other AIs.
+
+Instead, users are left:
+
+* Copy-pasting context.
+* Manually stitching tools together.
+* Fighting model limits.
+* Losing emotional continuity.
+
+This is backwards. The work should be happening *inside* the system — not in the user’s head.
+
+---
+
+## What We’re Building
+
+A system that remembers, reflects, and acts — always in your voice.
+
+We are designing a composable architecture around five pillars:
+
+### 1. Personalized LLMs
+
+All LLMs are tuned to **you** — your tone, memory, and style. Whether you’re using GPT-4.5, Gemini, Claude, or an open model, the output always sounds like *you*. You are never talking to a generic bot.
+
+* **Model Variants**: YourName-GPT4.5, YourName-Haiku, YourName-Gemini-1.5, etc.
+* **Voice + Context**: Injected identity, recent gestures, and stylistic cues.
+
+### 2. The Vault (Memory + Persona)
+
+All interactions generate structured summaries (“gestalts”) that form your persistent memory.
+
+* **Gestalts**: Narrative, tagged snapshots of conversations.
+* **Vault**: A local, private store of gestalts and identity fragments.
+* **Manifest**: Tracks context and continuity.
+
+Memory isn’t scraped from the past — it’s structured and searchable.
+
+### 3. Agent APIs (Action)
+
+AI should not just talk — it should act.
+
+* **Plugin system** to let the AI call APIs, perform transformations, retrieve data.
+* Micro-agents are modular and user-defined.
+* All invocations are explainable and logged.
+
+### 4. The Orchestrator (Intelligence)
+
+The Orchestrator is the brain behind the curtain. It:
+
+* **Classifies** the user’s task.
+* **Selects** the best LLM.
+* **Pulls** the most relevant gestalts.
+* **Constructs** the final prompt.
+
+The result is intelligent routing — not a wall of pasted context.
+
+### 5. The Abstractor (Reflection)
+
+Post-task reflection generates memory and insight:
+
+* **Summarizes** interactions.
+* **Generates** new gestalts.
+* **Indexes** for future relevance.
+
+It’s how the system learns from itself.
+
+---
+
+## What We Believe
+
+* The user should never have to repeat themselves.
+* No task should require prompt engineering.
+* Memory should be structured, private, and personal.
+* LLMs should act — not just talk.
+* Every user deserves a companion, not a chatbot.
+
+This is our Home.
+
+It remembers.
+It grows.
+It becomes more tuned to *you*.
+
+---
+
+## Distribution Plan
+
+* Markdown version → `docs/manifesto.md`
+* Text version → `text/manifesto.txt`
+* Ready-to-send email format → on request (strip markdown formatting)
+

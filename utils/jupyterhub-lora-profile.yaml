@@ -1,0 +1,27 @@
+singleuser:
+  profileList:
+    - display_name: "LoRA Trainer (GPU)"
+      description: "Launch JupyterLab on a GPU node with PEFT/LoRA tools"
+      default: false
+      kubespawner_override:
+        image: gcr.io/YOUR_PROJECT_ID/aiko/loratrainer:latest
+        cpu_guarantee: 2
+        mem_guarantee: 8G
+        mem_limit: 24G
+        extra_resource_limits:
+          nvidia.com/gpu: "1"
+        tolerations:
+          - key: "nvidia.com/gpu"
+            operator: "Equal"
+            value: "true"
+            effect: "NoSchedule"
+        node_selector:
+          cloud.google.com/gke-accelerator: "nvidia-l4"
+        lifecycle_hooks:
+          postStart:
+            exec:
+              command:
+                - "bash"
+                - "-c"
+                - >
+                  echo "Warming up LoRA training environment..."
