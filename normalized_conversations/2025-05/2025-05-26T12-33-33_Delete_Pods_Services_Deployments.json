@@ -1,0 +1,42 @@
+[
+  {
+    "role": "System",
+    "parts": [
+      ""
+    ],
+    "flattened": "",
+    "id": "3813b4d9-f9d7-450e-9394-2df5f4455c9f",
+    "create_time": null,
+    "timestamp": ""
+  },
+  {
+    "role": "User",
+    "parts": [
+      "how can i delete all pods, services, and deployments in a kubernetes namespace, but leave the secrets"
+    ],
+    "flattened": "how can i delete all pods, services, and deployments in a kubernetes namespace, but leave the secrets",
+    "id": "270814fa-0fe5-44f9-9dc2-fa3bd8cfcf38",
+    "create_time": 1748288012.037,
+    "timestamp": "2025-05-26T19:33:32.037000Z"
+  },
+  {
+    "role": "AI Partner",
+    "parts": [
+      "To delete **all pods, services, and deployments** in a specific Kubernetes namespace **without deleting secrets**, you can use `kubectl delete` with label selectors or resource types.\n\nHere’s a safe and targeted approach:\n\n---\n\n### 🔧 **Delete Deployments, Services, and Pods Only**\n```bash\nkubectl delete deployments,services,pods --all -n <namespace>\n```\n\nThis will:\n- Delete **all deployments** in the namespace (which will delete the pods created by them),\n- Delete **all services**, and\n- Delete **any standalone pods**.\n\n**It will NOT delete secrets, configmaps, PVCs, etc.**\n\n---\n\n### 🧪 Optional: Dry Run First\nTo verify what will be deleted:\n```bash\nkubectl delete deployments,services,pods --all -n <namespace> --dry-run=client -o name\n```\n\n---\n\n### 🚀 Bonus: Delete Other Non-Secret Resources (Optional)\nIf you also want to delete other resources (like `replicasets`, `statefulsets`, `daemonsets`, etc.) but still exclude secrets:\n\n```bash\nkubectl api-resources --verbs=delete --namespaced -o name | \\\n  grep -v '^secrets$' | \\\n  xargs -n1 kubectl delete --all -n <namespace>\n```\n\nThis will:\n- Get all namespaced resources that support `delete`,\n- Exclude `secrets`,\n- Delete everything else in that namespace.\n\n⚠️ **Make sure you trust the output** before running this in production.\n\n---\n\nLet me know if you also want to preserve configmaps, PVCs, or other types."
+    ],
+    "flattened": "To delete **all pods, services, and deployments** in a specific Kubernetes namespace **without deleting secrets**, you can use `kubectl delete` with label selectors or resource types.\n\nHere’s a safe and targeted approach:\n\n---\n\n### 🔧 **Delete Deployments, Services, and Pods Only**\n```bash\nkubectl delete deployments,services,pods --all -n <namespace>\n```\n\nThis will:\n- Delete **all deployments** in the namespace (which will delete the pods created by them),\n- Delete **all services**, and\n- Delete **any standalone pods**.\n\n**It will NOT delete secrets, configmaps, PVCs, etc.**\n\n---\n\n### 🧪 Optional: Dry Run First\nTo verify what will be deleted:\n```bash\nkubectl delete deployments,services,pods --all -n <namespace> --dry-run=client -o name\n```\n\n---\n\n### 🚀 Bonus: Delete Other Non-Secret Resources (Optional)\nIf you also want to delete other resources (like `replicasets`, `statefulsets`, `daemonsets`, etc.) but still exclude secrets:\n\n```bash\nkubectl api-resources --verbs=delete --namespaced -o name | \\\n  grep -v '^secrets$' | \\\n  xargs -n1 kubectl delete --all -n <namespace>\n```\n\nThis will:\n- Get all namespaced resources that support `delete`,\n- Exclude `secrets`,\n- Delete everything else in that namespace.\n\n⚠️ **Make sure you trust the output** before running this in production.\n\n---\n\nLet me know if you also want to preserve configmaps, PVCs, or other types.",
+    "id": "4c9c084b-4411-40ff-8e2d-541b6278e5f3",
+    "create_time": 1748288013.306126,
+    "timestamp": "2025-05-26T19:33:33.306126Z"
+  },
+  {
+    "role": "AI Partner",
+    "parts": [
+      ""
+    ],
+    "flattened": "",
+    "id": "ed1d7e63-215d-4130-8255-48fb9a3ed4f3",
+    "create_time": 1748288025.202608,
+    "timestamp": "2025-05-26T19:33:45.202608Z"
+  }
+]

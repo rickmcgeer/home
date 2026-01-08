@@ -1,0 +1,42 @@
+[
+  {
+    "role": "System",
+    "parts": [
+      ""
+    ],
+    "flattened": "",
+    "id": "4f4f0d8d-2104-49e6-981e-26e0692a799f",
+    "create_time": null,
+    "timestamp": ""
+  },
+  {
+    "role": "User",
+    "parts": [
+      "I'm trying to pretty-print JSON on a web page.  I tried formatting with dumps on the server side, setting indent=2, but the rendered JSON came out as a single line.  If I had access to the body tag I'd write a simple onLoad() function, but the body tag is in the parent template, which is widely shared with other templates.  Any thoughts?"
+    ],
+    "flattened": "I'm trying to pretty-print JSON on a web page.  I tried formatting with dumps on the server side, setting indent=2, but the rendered JSON came out as a single line.  If I had access to the body tag I'd write a simple onLoad() function, but the body tag is in the parent template, which is widely shared with other templates.  Any thoughts?",
+    "id": "ab10a474-710f-4422-95fb-60e391ea50b2",
+    "create_time": 1749670245.652,
+    "timestamp": "2025-06-11T19:30:45.652000Z"
+  },
+  {
+    "role": "AI Partner",
+    "parts": [
+      "You have a few good options, depending on how much control you have over the HTML and JavaScript in your page. The root issue here is that even though `json.dumps(obj, indent=2)` gives you pretty-printed JSON, if you just insert it into HTML without preserving whitespace (e.g., via a `<pre>` tag), the browser collapses it into a single line.\n\nHere are the cleanest options:\n\n---\n\n### ✅ **Option 1: Use `<pre>` to preserve formatting**\nIf you can wrap your rendered JSON in a `<pre>` tag, whitespace will be preserved automatically:\n\n```html\n<pre>{{ json_data }}</pre>\n```\n\nOn the server:\n\n```python\njson_data = json.dumps(data, indent=2)\nreturn render_template(\"your_template.html\", json_data=json_data)\n```\n\nThis is the **simplest and most reliable** approach.\n\n---\n\n### ✅ **Option 2: Escape and pretty-print client-side**\nIf the JSON is embedded as a string in a script block or attribute, you can format it dynamically in JavaScript.\n\nExample:\n\n```html\n<pre id=\"json-output\"></pre>\n<script>\n  const rawData = {{ json_data | tojson | safe }};\n  document.getElementById(\"json-output\").textContent = JSON.stringify(rawData, null, 2);\n</script>\n```\n\nThis lets you keep the raw data and format it in the browser without needing to control the `<body onload>`.\n\n---\n\n### ✅ **Option 3: Use a JS function on DOMContentLoaded**\nIf you can include inline JavaScript, but can't modify `<body>`, use this pattern instead of `onLoad()`:\n\n```html\n<script>\n  document.addEventListener(\"DOMContentLoaded\", () => {\n    const rawData = {{ json_data | tojson | safe }};\n    document.getElementById(\"json-output\").textContent = JSON.stringify(rawData, null, 2);\n  });\n</script>\n```\n\nThis gives you the same effect as `onLoad`, but works even when you can’t touch the `<body>` tag.\n\n---\n\n### 🧼 Pro tip: Use `textContent`, not `innerHTML`\nWhen inserting JSON into an element, use `.textContent` to avoid breaking quotes or injecting HTML accidentally.\n\n---\n\nLet me know if you’re using a specific framework (like Flask + Jinja, or Django), and I can tailor this further."
+    ],
+    "flattened": "You have a few good options, depending on how much control you have over the HTML and JavaScript in your page. The root issue here is that even though `json.dumps(obj, indent=2)` gives you pretty-printed JSON, if you just insert it into HTML without preserving whitespace (e.g., via a `<pre>` tag), the browser collapses it into a single line.\n\nHere are the cleanest options:\n\n---\n\n### ✅ **Option 1: Use `<pre>` to preserve formatting**\nIf you can wrap your rendered JSON in a `<pre>` tag, whitespace will be preserved automatically:\n\n```html\n<pre>{{ json_data }}</pre>\n```\n\nOn the server:\n\n```python\njson_data = json.dumps(data, indent=2)\nreturn render_template(\"your_template.html\", json_data=json_data)\n```\n\nThis is the **simplest and most reliable** approach.\n\n---\n\n### ✅ **Option 2: Escape and pretty-print client-side**\nIf the JSON is embedded as a string in a script block or attribute, you can format it dynamically in JavaScript.\n\nExample:\n\n```html\n<pre id=\"json-output\"></pre>\n<script>\n  const rawData = {{ json_data | tojson | safe }};\n  document.getElementById(\"json-output\").textContent = JSON.stringify(rawData, null, 2);\n</script>\n```\n\nThis lets you keep the raw data and format it in the browser without needing to control the `<body onload>`.\n\n---\n\n### ✅ **Option 3: Use a JS function on DOMContentLoaded**\nIf you can include inline JavaScript, but can't modify `<body>`, use this pattern instead of `onLoad()`:\n\n```html\n<script>\n  document.addEventListener(\"DOMContentLoaded\", () => {\n    const rawData = {{ json_data | tojson | safe }};\n    document.getElementById(\"json-output\").textContent = JSON.stringify(rawData, null, 2);\n  });\n</script>\n```\n\nThis gives you the same effect as `onLoad`, but works even when you can’t touch the `<body>` tag.\n\n---\n\n### 🧼 Pro tip: Use `textContent`, not `innerHTML`\nWhen inserting JSON into an element, use `.textContent` to avoid breaking quotes or injecting HTML accidentally.\n\n---\n\nLet me know if you’re using a specific framework (like Flask + Jinja, or Django), and I can tailor this further.",
+    "id": "f4f6c05b-abb0-4e6e-9d05-411ef47cd90e",
+    "create_time": 1749670247.96721,
+    "timestamp": "2025-06-11T19:30:47.967210Z"
+  },
+  {
+    "role": "AI Partner",
+    "parts": [
+      ""
+    ],
+    "flattened": "",
+    "id": "6ddbeeec-7e62-490f-8df2-20912ed48931",
+    "create_time": 1749670258.98477,
+    "timestamp": "2025-06-11T19:30:58.984770Z"
+  }
+]

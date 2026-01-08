@@ -1,0 +1,32 @@
+[
+  {
+    "role": "System",
+    "parts": [
+      ""
+    ],
+    "flattened": "",
+    "id": "eeab9844-4757-41e6-8278-9f1b2b9c645a",
+    "create_time": 1681171520.835019,
+    "timestamp": "2023-04-11T00:05:20.835019Z"
+  },
+  {
+    "role": "User",
+    "parts": [
+      "cover letter for a job as https://careerspub.universityofcalifornia.edu/psp/ucb/EMPLOYEE/HRMS/c/HRS_HRAM.HRS_APP_SCHJOB.GBL?Page=HRS_APP_SCHJOB&Action=U&FOCUS=Applicant&SiteId=21"
+    ],
+    "flattened": "cover letter for a job as https://careerspub.universityofcalifornia.edu/psp/ucb/EMPLOYEE/HRMS/c/HRS_HRAM.HRS_APP_SCHJOB.GBL?Page=HRS_APP_SCHJOB&Action=U&FOCUS=Applicant&SiteId=21",
+    "id": "4c6a0a58-210a-49c9-b711-ef2f68c3a402",
+    "create_time": 1681171520.843083,
+    "timestamp": "2023-04-11T00:05:20.843083Z"
+  },
+  {
+    "role": "AI Partner",
+    "parts": [
+      "\n\nDear Hiring Manager,\n\nI am excited to apply for the position of [insert position title] at the University of California, Berkeley, as advertised on the careers website. I am confident that my qualifications and experience make me a suitable candidate for this role, and I am eager to contribute my skills to this esteemed institution.\n\nAs a [insert your current job or recent experience], I have developed a deep understanding of [insert relevant skills or knowledge]. In addition, I possess a [insert relevant degree or certification], which has given me a strong foundation in [insert relevant field or subject matter]. I am confident that these experiences have prepared me well for the position of [insert position title].\n\nIn particular, I am impressed by the University of California, Berkeley's commitment to [insert relevant initiative or goal], as well as its reputation as a leader in [insert relevant field or industry]. I am eager to join this community and contribute my skills to advancing the university's mission.\n\nIn my current role, I have demonstrated my ability to [insert specific achievement or accomplishment]. I am confident that I can bring this same level of dedication and expertise to the University of California, Berkeley. In addition, I am highly organized, detail-oriented, and possess excellent communication skills, which I believe will enable me to thrive in this role.\n\nThank you for considering my application. I look forward to the opportunity to discuss my qualifications further in an interview.\n\nSincerely,\n\n[Your Name]"
+    ],
+    "flattened": "Dear Hiring Manager,\n\nI am excited to apply for the position of [insert position title] at the University of California, Berkeley, as advertised on the careers website. I am confident that my qualifications and experience make me a suitable candidate for this role, and I am eager to contribute my skills to this esteemed institution.\n\nAs a [insert your current job or recent experience], I have developed a deep understanding of [insert relevant skills or knowledge]. In addition, I possess a [insert relevant degree or certification], which has given me a strong foundation in [insert relevant field or subject matter]. I am confident that these experiences have prepared me well for the position of [insert position title].\n\nIn particular, I am impressed by the University of California, Berkeley's commitment to [insert relevant initiative or goal], as well as its reputation as a leader in [insert relevant field or industry]. I am eager to join this community and contribute my skills to advancing the university's mission.\n\nIn my current role, I have demonstrated my ability to [insert specific achievement or accomplishment]. I am confident that I can bring this same level of dedication and expertise to the University of California, Berkeley. In addition, I am highly organized, detail-oriented, and possess excellent communication skills, which I believe will enable me to thrive in this role.\n\nThank you for considering my application. I look forward to the opportunity to discuss my qualifications further in an interview.\n\nSincerely,\n\n[Your Name]",
+    "id": "db0aae74-aaed-49f4-8779-9644e21931e5",
+    "create_time": 1681171537.247021,
+    "timestamp": "2023-04-11T00:05:37.247021Z"
+  }
+]

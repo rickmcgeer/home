@@ -1,0 +1,42 @@
+[
+  {
+    "role": "System",
+    "parts": [
+      ""
+    ],
+    "flattened": "",
+    "id": "d9f43404-fc53-474d-a1fc-fa49218016c1",
+    "create_time": null,
+    "timestamp": ""
+  },
+  {
+    "role": "User",
+    "parts": [
+      "how do i enable python regular expressions in sqlite3"
+    ],
+    "flattened": "how do i enable python regular expressions in sqlite3",
+    "id": "aaa24f3a-2f6d-48f4-913d-74d8906448f6",
+    "create_time": 1724008544.446063,
+    "timestamp": "2024-08-18T19:15:44.446063Z"
+  },
+  {
+    "role": "AI Partner",
+    "parts": [
+      ""
+    ],
+    "flattened": "",
+    "id": "92b11bcf-73e3-45b5-ac03-a483ef9fafab",
+    "create_time": 1724008561.575358,
+    "timestamp": "2024-08-18T19:16:01.575358Z"
+  },
+  {
+    "role": "AI Partner",
+    "parts": [
+      "To enable the use of regular expressions in SQLite through Python, you need to create a custom function in Python and register it with the SQLite connection. SQLite itself does not have built-in support for regular expressions, but Python's `re` module can be used to fill this gap.\n\nHere’s a step-by-step guide on how to do it:\n\n### 1. Import the Required Modules\nYou’ll need the `sqlite3` module to interact with SQLite and the `re` module for regular expressions.\n\n```python\nimport sqlite3\nimport re\n```\n\n### 2. Create a Custom Regular Expression Function\nDefine a function that will use the `re` module to apply a regular expression pattern to a given text.\n\n```python\ndef regex_match(pattern, text):\n    return re.search(pattern, text) is not None\n```\n\n### 3. Connect to the SQLite Database\nCreate a connection to your SQLite database.\n\n```python\nconn = sqlite3.connect('your_database.db')\n```\n\n### 4. Register the Custom Function\nUse the `create_function` method to register your custom regular expression function.\n\n```python\nconn.create_function(\"REGEXP\", 2, regex_match)\n```\n\n### 5. Use the Regular Expression in SQL Queries\nNow you can use the `REGEXP` operator in your SQL queries.\n\n```python\ncursor = conn.cursor()\n\n# Example query using the REGEXP function\ncursor.execute(\"SELECT * FROM your_table WHERE your_column REGEXP ?\", ('^pattern$',))\n\n# Fetch the results\nresults = cursor.fetchall()\n\nfor row in results:\n    print(row)\n```\n\n### 6. Close the Connection\nDon’t forget to close the connection when you’re done.\n\n```python\nconn.close()\n```\n\n### Example\nHere’s a complete example:\n\n```python\nimport sqlite3\nimport re\n\n# Define the custom regex function\ndef regex_match(pattern, text):\n    return re.search(pattern, text) is not None\n\n# Connect to the SQLite database\nconn = sqlite3.connect('example.db')\n\n# Register the custom function\nconn.create_function(\"REGEXP\", 2, regex_match)\n\n# Create a cursor object\ncursor = conn.cursor()\n\n# Example query using the REGEXP function\ncursor.execute(\"SELECT * FROM users WHERE name REGEXP ?\", ('^J.*',))\n\n# Fetch and print the results\nresults = cursor.fetchall()\nfor row in results:\n    print(row)\n\n# Close the connection\nconn.close()\n```\n\nThis example assumes you have a table named `users` with a column `name`, and it selects all rows where the name starts with the letter \"J\". The pattern `'^J.*'` is a regular expression that matches any string starting with \"J\"."
+    ],
+    "flattened": "To enable the use of regular expressions in SQLite through Python, you need to create a custom function in Python and register it with the SQLite connection. SQLite itself does not have built-in support for regular expressions, but Python's `re` module can be used to fill this gap.\n\nHere’s a step-by-step guide on how to do it:\n\n### 1. Import the Required Modules\nYou’ll need the `sqlite3` module to interact with SQLite and the `re` module for regular expressions.\n\n```python\nimport sqlite3\nimport re\n```\n\n### 2. Create a Custom Regular Expression Function\nDefine a function that will use the `re` module to apply a regular expression pattern to a given text.\n\n```python\ndef regex_match(pattern, text):\n    return re.search(pattern, text) is not None\n```\n\n### 3. Connect to the SQLite Database\nCreate a connection to your SQLite database.\n\n```python\nconn = sqlite3.connect('your_database.db')\n```\n\n### 4. Register the Custom Function\nUse the `create_function` method to register your custom regular expression function.\n\n```python\nconn.create_function(\"REGEXP\", 2, regex_match)\n```\n\n### 5. Use the Regular Expression in SQL Queries\nNow you can use the `REGEXP` operator in your SQL queries.\n\n```python\ncursor = conn.cursor()\n\n# Example query using the REGEXP function\ncursor.execute(\"SELECT * FROM your_table WHERE your_column REGEXP ?\", ('^pattern$',))\n\n# Fetch the results\nresults = cursor.fetchall()\n\nfor row in results:\n    print(row)\n```\n\n### 6. Close the Connection\nDon’t forget to close the connection when you’re done.\n\n```python\nconn.close()\n```\n\n### Example\nHere’s a complete example:\n\n```python\nimport sqlite3\nimport re\n\n# Define the custom regex function\ndef regex_match(pattern, text):\n    return re.search(pattern, text) is not None\n\n# Connect to the SQLite database\nconn = sqlite3.connect('example.db')\n\n# Register the custom function\nconn.create_function(\"REGEXP\", 2, regex_match)\n\n# Create a cursor object\ncursor = conn.cursor()\n\n# Example query using the REGEXP function\ncursor.execute(\"SELECT * FROM users WHERE name REGEXP ?\", ('^J.*',))\n\n# Fetch and print the results\nresults = cursor.fetchall()\nfor row in results:\n    print(row)\n\n# Close the connection\nconn.close()\n```\n\nThis example assumes you have a table named `users` with a column `name`, and it selects all rows where the name starts with the letter \"J\". The pattern `'^J.*'` is a regular expression that matches any string starting with \"J\".",
+    "id": "026683c2-af39-4c51-8e29-7baad38537bd",
+    "create_time": 1724008561.575484,
+    "timestamp": "2024-08-18T19:16:01.575484Z"
+  }
+]

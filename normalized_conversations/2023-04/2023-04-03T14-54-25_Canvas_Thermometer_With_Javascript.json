@@ -1,0 +1,32 @@
+[
+  {
+    "role": "System",
+    "parts": [
+      ""
+    ],
+    "flattened": "",
+    "id": "56c90c35-8f72-46f9-871e-d77da5b57b96",
+    "create_time": 1680558865.90431,
+    "timestamp": "2023-04-03T21:54:25.904310Z"
+  },
+  {
+    "role": "User",
+    "parts": [
+      "code for thermometer using Javascript canvas"
+    ],
+    "flattened": "code for thermometer using Javascript canvas",
+    "id": "5791f729-bff9-423a-a6c4-f142cdcb854b",
+    "create_time": 1680558865.908058,
+    "timestamp": "2023-04-03T21:54:25.908058Z"
+  },
+  {
+    "role": "AI Partner",
+    "parts": [
+      "Here's an example code for a simple thermometer using Javascript and HTML5 Canvas:\n\nHTML:\n```html\n<canvas id=\"thermometer\" width=\"200\" height=\"400\"></canvas>\n```\n\nJavascript:\n```javascript\nconst canvas = document.getElementById('thermometer');\nconst ctx = canvas.getContext('2d');\n\n// Draw the thermometer background\nctx.fillStyle = '#fff'; // Set background color to white\nctx.fillRect(0, 0, canvas.width, canvas.height); // Fill the whole canvas with white\nctx.fillStyle = '#f00'; // Set fill color to red\nctx.fillRect(70, 50, 60, 300); // Draw the red part of the thermometer\n\n// Draw the mercury\nfunction drawMercury(percentage) {\n  const mercuryHeight = 3 * canvas.height * percentage / 100 - 50; // Calculate the height of the mercury\n  ctx.fillStyle = '#f90'; // Set fill color to orange\n  ctx.fillRect(70, 50 + 300 - mercuryHeight, 60, mercuryHeight); // Draw the mercury\n}\n\ndrawMercury(50); // Draw the mercury at 50% height\n```\n\nThis code draws a thermometer with a red background and an orange mercury that fills the thermometer up to a given percentage (in this example, 50%). The `drawMercury()` function takes a percentage as an argument and calculates the height of the mercury accordingly. You can call this function with a different percentage to update the thermometer."
+    ],
+    "flattened": "Here's an example code for a simple thermometer using Javascript and HTML5 Canvas:\n\nHTML:\n```html\n<canvas id=\"thermometer\" width=\"200\" height=\"400\"></canvas>\n```\n\nJavascript:\n```javascript\nconst canvas = document.getElementById('thermometer');\nconst ctx = canvas.getContext('2d');\n\n// Draw the thermometer background\nctx.fillStyle = '#fff'; // Set background color to white\nctx.fillRect(0, 0, canvas.width, canvas.height); // Fill the whole canvas with white\nctx.fillStyle = '#f00'; // Set fill color to red\nctx.fillRect(70, 50, 60, 300); // Draw the red part of the thermometer\n\n// Draw the mercury\nfunction drawMercury(percentage) {\n  const mercuryHeight = 3 * canvas.height * percentage / 100 - 50; // Calculate the height of the mercury\n  ctx.fillStyle = '#f90'; // Set fill color to orange\n  ctx.fillRect(70, 50 + 300 - mercuryHeight, 60, mercuryHeight); // Draw the mercury\n}\n\ndrawMercury(50); // Draw the mercury at 50% height\n```\n\nThis code draws a thermometer with a red background and an orange mercury that fills the thermometer up to a given percentage (in this example, 50%). The `drawMercury()` function takes a percentage as an argument and calculates the height of the mercury accordingly. You can call this function with a different percentage to update the thermometer.",
+    "id": "2e0ecfc8-3912-4c56-8fbb-61896e8821de",
+    "create_time": 1680558885.589328,
+    "timestamp": "2023-04-03T21:54:45.589328Z"
+  }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "role": "System",
+    "parts": [
+      ""
+    ],
+    "flattened": "",
+    "id": "32a42e29-4736-4f3a-89e9-9a9a54c65fe1",
+    "create_time": 1683856060.801094,
+    "timestamp": "2023-05-12T01:47:40.801094Z"
+  },
+  {
+    "role": "User",
+    "parts": [
+      "how do i tell how many dml; statements are pending in bigquery"
+    ],
+    "flattened": "how do i tell how many dml; statements are pending in bigquery",
+    "id": "aaa275fb-e0b7-46b1-8703-e0d054862ed8",
+    "create_time": 1683856060.80257,
+    "timestamp": "2023-05-12T01:47:40.802570Z"
+  },
+  {
+    "role": "AI Partner",
+    "parts": [
+      "In BigQuery, you can check the number of DML (Data Manipulation Language) statements that are pending by querying the `INFORMATION_SCHEMA.JOBS_BY_PROJECT` table. \n\nHere's an example query that you can use:\n\n```\nSELECT COUNT(*) as num_pending_dml_statements\nFROM `region-us`.INFORMATION_SCHEMA.JOBS_BY_PROJECT\nWHERE job_type = 'DML'\nAND state = 'PENDING'\n```\n\nIn this query, `region-us` is the region where your BigQuery dataset is located. You can replace this with the actual region where your dataset is stored.\n\nThe `COUNT(*)` function returns the number of rows that match the specified conditions in the `WHERE` clause. In this case, it counts the number of rows where the job type is DML and the state is PENDING.\n\nAfter running this query, you will get the number of pending DML statements in your BigQuery project."
+    ],
+    "flattened": "In BigQuery, you can check the number of DML (Data Manipulation Language) statements that are pending by querying the `INFORMATION_SCHEMA.JOBS_BY_PROJECT` table. \n\nHere's an example query that you can use:\n\n```\nSELECT COUNT(*) as num_pending_dml_statements\nFROM `region-us`.INFORMATION_SCHEMA.JOBS_BY_PROJECT\nWHERE job_type = 'DML'\nAND state = 'PENDING'\n```\n\nIn this query, `region-us` is the region where your BigQuery dataset is located. You can replace this with the actual region where your dataset is stored.\n\nThe `COUNT(*)` function returns the number of rows that match the specified conditions in the `WHERE` clause. In this case, it counts the number of rows where the job type is DML and the state is PENDING.\n\nAfter running this query, you will get the number of pending DML statements in your BigQuery project.",
+    "id": "aa6b64ef-833f-42e2-bfc1-598851ef090a",
+    "create_time": 1683856070.400485,
+    "timestamp": "2023-05-12T01:47:50.400485Z"
+  },
+  {
+    "role": "User",
+    "parts": [
+      "pandas disable warning"
+    ],
+    "flattened": "pandas disable warning",
+    "id": "aaa2b959-d41c-499b-95e9-9b93a63c4dca",
+    "create_time": 1683856480.190721,
+    "timestamp": "2023-05-12T01:54:40.190721Z"
+  },
+  {
+    "role": "AI Partner",
+    "parts": [
+      "Pandas may produce warning messages for various reasons, such as when performing operations that may lead to unexpected behavior or when loading data with incompatible types. While it is generally a good practice to address these warnings to ensure the correctness of your code, you can disable them if you wish to suppress the output temporarily. \n\nTo disable warning messages in Pandas, you can use the `warnings` module from the Python standard library. Here's an example code snippet that shows how to do this:\n\n```\nimport warnings\nimport pandas as pd\n\n# Disable all warnings\nwarnings.filterwarnings('ignore')\n\n# Your Pandas code goes here\n\n# Re-enable warnings (optional)\nwarnings.filterwarnings('default')\n```\n\nIn this example, the `warnings.filterwarnings('ignore')` line disables all warning messages in Pandas. You can add this line at the beginning of your code to suppress all warnings produced by Pandas. \n\nAfter your code is executed, you can re-enable warnings by calling `warnings.filterwarnings('default')` to restore the default behavior.\n\nNote that disabling warning messages should be used with caution as it can hide important information about potential issues in your code. It is recommended to address the underlying issues that cause the warnings rather than suppressing them."
+    ],
+    "flattened": "Pandas may produce warning messages for various reasons, such as when performing operations that may lead to unexpected behavior or when loading data with incompatible types. While it is generally a good practice to address these warnings to ensure the correctness of your code, you can disable them if you wish to suppress the output temporarily. \n\nTo disable warning messages in Pandas, you can use the `warnings` module from the Python standard library. Here's an example code snippet that shows how to do this:\n\n```\nimport warnings\nimport pandas as pd\n\n# Disable all warnings\nwarnings.filterwarnings('ignore')\n\n# Your Pandas code goes here\n\n# Re-enable warnings (optional)\nwarnings.filterwarnings('default')\n```\n\nIn this example, the `warnings.filterwarnings('ignore')` line disables all warning messages in Pandas. You can add this line at the beginning of your code to suppress all warnings produced by Pandas. \n\nAfter your code is executed, you can re-enable warnings by calling `warnings.filterwarnings('default')` to restore the default behavior.\n\nNote that disabling warning messages should be used with caution as it can hide important information about potential issues in your code. It is recommended to address the underlying issues that cause the warnings rather than suppressing them.",
+    "id": "e3d281c1-0634-4f81-818b-199ca1a3a9ac",
+    "create_time": 1683856494.800891,
+    "timestamp": "2023-05-12T01:54:54.800891Z"
+  }
+]

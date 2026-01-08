@@ -1,0 +1,32 @@
+[
+  {
+    "role": "System",
+    "parts": [
+      ""
+    ],
+    "flattened": "",
+    "id": "3b2c93b3-2859-4426-bddd-f878f79cac15",
+    "create_time": 1670973856.637279,
+    "timestamp": "2022-12-13T23:24:16.637279Z"
+  },
+  {
+    "role": "User",
+    "parts": [
+      "why does a full moon rise in the northeast in the winter and the southeast in the summer"
+    ],
+    "flattened": "why does a full moon rise in the northeast in the winter and the southeast in the summer",
+    "id": "e73fe2d1-021f-4718-8ec9-d140b7deee06",
+    "create_time": 1670973856.637732,
+    "timestamp": "2022-12-13T23:24:16.637732Z"
+  },
+  {
+    "role": "AI Partner",
+    "parts": [
+      "The position of the moon in the sky at any given time depends on a number of factors, including the time of year and the moon's position in its orbit around the Earth. In general, the moon rises in the east and sets in the west, just like the sun. However, the exact direction from which the moon rises can vary depending on the time of year.\n\nDuring the winter months, the moon's orbit brings it closer to the Earth, which can cause it to rise in the northeastern part of the sky. This is because the moon's orbit is tilted with respect to the Earth's equator, so when the moon is closer to the Earth, it appears to rise from a more northerly direction.\n\nIn the summer months, on the other hand, the moon is farther from the Earth, which can cause it to rise from the southeastern part of the sky. This is because the moon's orbit is tilted with respect to the Earth's equator, so when the moon is farther from the Earth, it appears to rise from a more southerly direction.\n\nOverall, the position of the moon in the sky at any given time depends on a number of factors, including the time of year and the moon's position in its orbit around the Earth."
+    ],
+    "flattened": "The position of the moon in the sky at any given time depends on a number of factors, including the time of year and the moon's position in its orbit around the Earth. In general, the moon rises in the east and sets in the west, just like the sun. However, the exact direction from which the moon rises can vary depending on the time of year.\n\nDuring the winter months, the moon's orbit brings it closer to the Earth, which can cause it to rise in the northeastern part of the sky. This is because the moon's orbit is tilted with respect to the Earth's equator, so when the moon is closer to the Earth, it appears to rise from a more northerly direction.\n\nIn the summer months, on the other hand, the moon is farther from the Earth, which can cause it to rise from the southeastern part of the sky. This is because the moon's orbit is tilted with respect to the Earth's equator, so when the moon is farther from the Earth, it appears to rise from a more southerly direction.\n\nOverall, the position of the moon in the sky at any given time depends on a number of factors, including the time of year and the moon's position in its orbit around the Earth.",
+    "id": "2640d07c-7d04-4b85-8c1c-08181fd78490",
+    "create_time": 1670973893.822919,
+    "timestamp": "2022-12-13T23:24:53.822919Z"
+  }
+]
